@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ร้านเครื่องดื่ม</title>
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+    <style>
+        body { font-family: system-ui, sans-serif; background: #f3f4f6; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+        .card { background: white; padding: 24px 28px; border-radius: 12px; box-shadow: 0 10px 30px rgba(15,23,42,0.12); width: 320px; text-align: center; }
+        h1 { margin-top: 0; margin-bottom: 12px; font-size: 1.4rem; color: #111827; }
+        label { display: block; margin-bottom: 6px; font-weight: 500; color: #374151; text-align: left; }
+        select { width: 100%; padding: 8px 10px; border-radius: 8px; border: 1px solid #d1d5db; margin-bottom: 12px; }
+        button { margin-top: 4px; padding: 8px 14px; border-radius: 999px; border: none; background: #2563eb; color: white; font-weight: 500; cursor: pointer; }
+        button:hover { background: #1d4ed8; }
+        #output { margin-top: 16px; min-height: 32px; padding: 8px 10px; background: #f9fafb; border-radius: 8px; color: #111827; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>ร้านเครื่องดื่ม</h1>
+
+        <label for="drink_selector">เลือกเมนูเครื่องดื่ม:</label>
+        <select id="drink_selector">
+            <option value="coffee">กาแฟเย็น (Coffee)</option>
+            <option value="milktea">ชานมไข่มุก (MilkTea)</option>
+            <option value="smoothie">สมูทตี้ผลไม้ (Smoothie)</option>
+        </select>
+
+        <button id="btn_show">ดูรายละเอียดเครื่องดื่ม</button>
+
+        <div id="output"></div>
+    </div>
+
+    <script type="py" src="./drinks.py"></script>
+</body>
+</html>
